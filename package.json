@@ -1,0 +1,24 @@
+{
+  "name": "argocd-sync-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to refresh and sync ArgoCD applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "argocd",
+    "sync",
+    "refresh",
+    "rollout",
+    "rollback"
+  ],
+  "author": "MayurDuduka",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "axios": "^1.7.2"
+  }
+}

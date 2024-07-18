@@ -1,0 +1,30 @@
+name: 'ArgoCD Sync Action'
+description: 'Refresh and sync multiple ArgoCD applications using ArgoCD API'
+author: 'MayurDuduka'
+branding:
+  icon: 'refresh-cw'
+  color: 'blue'
+inputs:
+  argocd_server:
+    description: 'ArgoCD Server URL'
+    required: true
+  argocd_username:
+    description: 'ArgoCD Username'
+    required: true
+  argocd_password:
+    description: 'ArgoCD Password'
+    required: true
+  argocd_app_names:
+    description: 'ArgoCD Application Names (comma-separated list)'
+    required: true
+  refresh_app:
+    description: 'Refresh Applications'
+    required: false
+    default: 'false'
+  sync_app:
+    description: 'Sync Applications'
+    required: false
+    default: 'false'
+runs:
+  using: node20
+  main: src/index.js
