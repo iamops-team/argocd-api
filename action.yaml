@@ -1,4 +1,4 @@
-name: 'ArgoCD Sync Action'
+name: 'ArgoCD API Action'
 description: 'Refresh and sync multiple ArgoCD applications using ArgoCD API'
 author: 'MayurDuduka'
 branding:
