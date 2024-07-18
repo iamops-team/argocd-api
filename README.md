@@ -1,6 +1,7 @@
 # ArgoCD Sync Action
 
 This action refreshes and syncs multiple ArgoCD applications using the ArgoCD API.
+- Future: ability to rollback to the previous version of ArgoCD Application (TODO)
 
 ## Inputs
 
