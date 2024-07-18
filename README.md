@@ -14,7 +14,7 @@ This action refreshes and syncs multiple ArgoCD applications using the ArgoCD AP
 ## Example usage
 
 ```yaml
-uses: MayurDuduka/argocd-sync-action@v1
+uses: MayurDuduka/argocd-sync-action@v1.0
 with:
   argocd_server: ${{ secrets.ARGOCD_SERVER }}
   argocd_username: ${{ secrets.ARGOCD_USERNAME }}
