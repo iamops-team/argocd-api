@@ -15,11 +15,13 @@ This action refreshes and syncs multiple ArgoCD applications using the ArgoCD AP
 ## Example usage
 
 ```yaml
-uses: MayurDuduka/argocd-sync-action@v1.0
-with:
-  argocd_server: ${{ secrets.ARGOCD_SERVER }}
-  argocd_username: ${{ secrets.ARGOCD_USERNAME }}
-  argocd_password: ${{ secrets.ARGOCD_PASSWORD }}
-  argocd_app_names: 'app1,app2,app3'
-  refresh_app: 'true'
-  sync_app: 'true'
+- name: ArgoCD API Action
+  uses: MayurDuduka/argocd-api@v1.0
+  with:
+    argocd_server: ${{ secrets.ARGOCD_SERVER }}
+    argocd_username: ${{ secrets.ARGOCD_USERNAME }}
+    argocd_password: ${{ secrets.ARGOCD_PASSWORD }}
+    argocd_app_names: 'app1,app2,app3'
+    refresh_app: 'true'
+    sync_app: 'true'
+```
