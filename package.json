@@ -17,6 +17,10 @@
   ],
   "author": "MayurDuduka",
   "license": "MIT",
+  "homepage": "https://github.com/MayurDuduka/argocd-api",
+  "bugs": {
+    "url": "https://github.com/MayurDuduka/argocd-api/issues"
+  },
   "dependencies": {
     "@actions/core": "^1.10.0",
     "axios": "^1.7.2"

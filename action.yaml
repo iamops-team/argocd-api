@@ -26,5 +26,8 @@ inputs:
     required: false
     default: 'false'
 runs:
-  using: node20
-  main: src/index.js
+  using: 'docker'
+  image: 'Dockerfile'
+# runs:
+#   using: node20
+#   main: src/index.js
