@@ -4,10 +4,7 @@ const axios = require("axios");
 const ARGOCD_SERVER = core.getInput("argocd_server", { required: true });
 const ARGOCD_USERNAME = core.getInput("argocd_username", { required: true });
 const ARGOCD_PASSWORD = core.getInput("argocd_password", { required: true });
-const ARGOCD_APP_NAMES = core
-  .getInput("argocd_app_names")
-  .split(",")
-  .map((app) => app.trim(), { required: true });
+const ARGOCD_APP_NAMES = core.getInput("argocd_app_names").split(",").map((app) => app.trim(), { required: true });
 const REFRESH_APP = core.getInput("refresh_app") === "true";
 const SYNC_APP = core.getInput("sync_app") === "true";
 
@@ -57,6 +54,7 @@ async function main() {
     const token = await getSessionToken();
 
     for (const appName of ARGOCD_APP_NAMES) {
+      console.log(`Processing application: ${appName}`);
       if (REFRESH_APP) {
         await refreshApplication(token, appName);
       }
@@ -65,8 +63,6 @@ async function main() {
         await syncApplication(token, appName);
       }
     }
-
-    core.info("All operations completed successfully");
   } catch (error) {
     core.setFailed(`An unexpected error occurred: ${error.message}`);
   }
