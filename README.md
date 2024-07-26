@@ -1,3 +1,4 @@
+[![Banner](images/Banner.png)](https://iamops.io/)
 # ArgoCD Sync Action
 
 This action refreshes and syncs multiple ArgoCD applications using the ArgoCD API.
